@@ -56,5 +56,5 @@ def download_x(url: str):
         raise HTTPException(status_code=400, detail=str(e))
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 10000))  # Padrão da Render é 10000, não 8000
+    port = int(os.getenv("PORT", 8080))  # Padrão da Render é 10000, não 8000
     uvicorn.run(app, port=port)
